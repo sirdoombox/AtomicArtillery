@@ -1,0 +1,11 @@
+{
+    "name": "AtomicArtillery",
+    "version": "0.1.1",
+    "title": "Atomic Artillery",
+    "author": "Doombox",
+    "contact": "",
+    "homepage": "",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "This mod adds Atomic Artillery shells"
+}
