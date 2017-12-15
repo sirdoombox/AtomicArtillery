@@ -12,7 +12,7 @@ data:extend(
 				recipe = "atomic-artillery-shell"
 			}
 		},
-		prerequisites = {"artillery"},
+		prerequisites = {"artillery", "atomic-bomb"},
 		unit =
 		{
 			ingredients =
