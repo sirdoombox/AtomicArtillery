@@ -8,9 +8,9 @@ data:extend(
 		effects =
 		{
 			{
-			    type = "unlock-recipe",
-			    recipe = "atomic-artillery-shell"
-	    	}
+				type = "unlock-recipe",
+				recipe = "atomic-artillery-shell"
+			}
 		},
 		prerequisites = {"artillery"},
 		unit =

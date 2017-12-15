@@ -15,16 +15,16 @@ data:extend(
 				type = "direct",
 				action_delivery =
 				{
-			  		type = "artillery",
+					type = "artillery",
 					projectile = "atomic-artillery-projectile",
 					starting_speed = 1,
 					direction_deviation = 0,
 					range_deviation = 0,
 					source_effects =
-		  			{
+					{
 						type = "create-explosion",
 						entity_name = "artillery-cannon-muzzle-flash"
-			  		},
+					},
 				}
 			},
 		},

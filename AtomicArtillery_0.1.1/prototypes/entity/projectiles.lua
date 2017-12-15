@@ -14,7 +14,7 @@ data:extend(
 			width = 64,
 			height = 64,
 			scale = 0.5,
-    	},
+		},
 		shadow =
 		{
 			filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
@@ -110,9 +110,9 @@ data:extend(
 			priority = "high"
 		}
 	},
-  	{
-	    type = "projectile",
-	    name = "atomic-artillery-wave",
+	{
+		type = "projectile",
+		name = "atomic-artillery-wave",
 		flags = {"not-on-map"},
 		acceleration = 0,
 		action =
@@ -122,28 +122,28 @@ data:extend(
 				action_delivery =
 				{
 					type = "instant",
-			  		target_effects =
-			  		{
-		    			{
-		  					type = "create-entity",
-		      				entity_name = "explosion"
-		    			}
-			  		}
+					target_effects =
+					{
+						{
+							type = "create-entity",
+							entity_name = "explosion"
+						}
+					}
 				}
-		  	},
-		  	{
-		    	type = "area",
-			    radius = 3,
-			    action_delivery =
-			    {
-		      		type = "instant",
-		      		target_effects =
-		      		{
-		        		type = "damage",
-		        		damage = {amount = 1500, type = "explosion"}
-		  			}
-		    	}
-		  	}
+			},
+			{
+				type = "area",
+				radius = 3,
+				action_delivery =
+				{
+					type = "instant",
+					target_effects =
+					{
+						type = "damage",
+						damage = {amount = 1500, type = "explosion"}
+					}
+				}
+			}
 		},
 		animation =
 		{
@@ -161,6 +161,6 @@ data:extend(
 			height = 1,
 			priority = "high"
 		}
-  },
+	},
 }
 )
