@@ -6,6 +6,6 @@
     "contact": "",
     "homepage": "",
     "factorio_version": "0.16",
-    "dependencies": ["base >= 0.16", "? MushroomCloud >= 1.0.0"],
+    "dependencies": ["base >= 0.16"],
     "description": "Adds Artillery Shells with a nuclear payload, a super lategame nuke alternative"
 }
