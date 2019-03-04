@@ -5,7 +5,6 @@ data:extend(
 		name = "atomic-artillery-shell",
 		icon = "__AtomicArtillery__/graphics/icons/atomic-artillery-shell.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		ammo_type =
 		{
 			category = "artillery-shell",
