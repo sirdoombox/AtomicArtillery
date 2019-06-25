@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 14/05/2019
+  Changes:
+    - The shell now correctly updates the map - Thanks to Adrian Vanderwal (https://github.com/adrianvanderwal)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 14/05/2019
   Changes:
