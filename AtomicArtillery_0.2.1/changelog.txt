@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 30/09/2020
+  Changes:
+    - Merged patch from Kingdud to re-order effects of artillery shell, making it work with artillery auto-fire correctly.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 25/09/2020
   Changes:
