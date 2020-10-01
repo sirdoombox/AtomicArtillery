@@ -82,7 +82,7 @@ data:extend(
 					action_delivery =
 					{
 					  type = "projectile",
-					  projectile = "atomic-artillery-wave",
+					  projectile = "atomic-bomb-wave",
 					  starting_speed = 0.5 * 0.7,
 					  starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
 					}
@@ -300,58 +300,6 @@ data:extend(
 			frame_count = 1,
 			width = 3,
 			height = 50,
-			priority = "high"
-		}
-	},
-	{
-		type = "projectile",
-		name = "atomic-artillery-wave",
-		flags = {"not-on-map"},
-		acceleration = 0,
-		action =
-		{
-			{
-				type = "direct",
-				action_delivery =
-				{
-					type = "instant",
-					target_effects =
-					{
-						{
-							type = "create-entity",
-							entity_name = "explosion"
-						}
-					}
-				}
-			},
-			{
-				type = "area",
-				radius = 3,
-				action_delivery =
-				{
-					type = "instant",
-					target_effects =
-					{
-						type = "damage",
-						damage = {amount = 1500, type = "explosion"}
-					}
-				}
-			}
-		},
-		animation =
-		{
-			filename = "__core__/graphics/empty.png",
-			frame_count = 1,
-			width = 1,
-			height = 1,
-			priority = "high"
-		},
-		shadow =
-		{
-			filename = "__core__/graphics/empty.png",
-			frame_count = 1,
-			width = 1,
-			height = 1,
 			priority = "high"
 		}
 	},
