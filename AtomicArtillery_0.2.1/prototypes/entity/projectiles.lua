@@ -46,17 +46,92 @@ data:extend(
 			  type = "instant",
 			  target_effects =
 			  {
+				--Damage effects				
+				{
+					type = "nested-result",
+					action = 
+					{
+						radius = 35, --same size as the shockwave to follow, needed to get auto-targeting to space shots correctly. Switched to fire because the thermal pulse is also a thing on nukes.
+						--Finally, by having this here, you get the radar update with everything dying like you expect with a nuke.
+						type = "area",
+						action_delivery = {
+							type = "instant",
+							target_effects = {
+								{
+									type = "damage",
+									damage = { amount = 1500, type = "fire" },
+								},
+							},
+						},
+					},
+				},
+				{
+				  type = "destroy-cliffs",
+				  radius = 9,
+				  explosion = "explosion"
+				},
+				{
+				  type = "nested-result",
+				  action =
+				  {
+					type = "area",
+					target_entities = false,
+					trigger_from_target = true,
+					repeat_count = 1000,
+					radius = 35,
+					action_delivery =
+					{
+					  type = "projectile",
+					  projectile = "atomic-artillery-wave",
+					  starting_speed = 0.5 * 0.7,
+					  starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+					}
+				  }
+				},
+				{
+				  type = "nested-result",
+				  action =
+				  {
+					type = "area",
+					target_entities = false,
+					trigger_from_target = true,
+					repeat_count = 1000,
+					radius = 7,
+					action_delivery =
+					{
+					  type = "projectile",
+					  projectile = "atomic-bomb-ground-zero-projectile",
+					  starting_speed = 0.6 * 0.8,
+					  starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+					}
+				  }
+				},
+				--Sound effects
+				{
+				  type = "play-sound",
+				  sound = sounds.nuclear_explosion_aftershock(0.4),
+				  play_on_target_position = false,
+				  -- min_distance = 200,
+				  max_distance = 1000,
+				  -- volume_modifier = 1,
+				  audible_distance_modifier = 3
+				},
+				{
+				  type = "play-sound",
+				  sound = sounds.nuclear_explosion(0.9),
+				  play_on_target_position = false,
+				  -- min_distance = 200,
+				  max_distance = 1000,
+				  -- volume_modifier = 1,
+				  audible_distance_modifier = 3
+				},
+				--Graphical effects
 				{
 				  type = "set-tile",
 				  tile_name = "nuclear-ground",
 				  radius = 12,
 				  apply_projection = true,
 				  tile_collision_mask = { "water-tile" },
-				},
-				{
-				  type = "destroy-cliffs",
-				  radius = 9,
-				  explosion = "explosion"
 				},
 				{
 				  type = "create-entity",
@@ -72,28 +147,6 @@ data:extend(
 				  strength = 6,
 				  full_strength_max_distance = 200,
 				  max_distance = 800
-				},
-				{
-				  type = "play-sound",
-				  sound = sounds.nuclear_explosion(0.9),
-				  play_on_target_position = false,
-				  -- min_distance = 200,
-				  max_distance = 1000,
-				  -- volume_modifier = 1,
-				  audible_distance_modifier = 3
-				},
-				{
-				  type = "play-sound",
-				  sound = sounds.nuclear_explosion_aftershock(0.4),
-				  play_on_target_position = false,
-				  -- min_distance = 200,
-				  max_distance = 1000,
-				  -- volume_modifier = 1,
-				  audible_distance_modifier = 3
-				},
-				{
-				  type = "damage",
-				  damage = {amount = 1500, type = "explosion"}
 				},
 				{
 				  type = "create-entity",
@@ -121,42 +174,6 @@ data:extend(
 				  spawn_max = 40,
 				  apply_projection = true,
 				  spread_evenly = true
-				},
-				{
-				  type = "nested-result",
-				  action =
-				  {
-					type = "area",
-					target_entities = false,
-					trigger_from_target = true,
-					repeat_count = 1000,
-					radius = 7,
-					action_delivery =
-					{
-					  type = "projectile",
-					  projectile = "atomic-bomb-ground-zero-projectile",
-					  starting_speed = 0.6 * 0.8,
-					  starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
-					}
-				  }
-				},
-				{
-				  type = "nested-result",
-				  action =
-				  {
-					type = "area",
-					target_entities = false,
-					trigger_from_target = true,
-					repeat_count = 1000,
-					radius = 35,
-					action_delivery =
-					{
-					  type = "projectile",
-					  projectile = "atomic-bomb-wave",
-					  starting_speed = 0.5 * 0.7,
-					  starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
-					}
-				  }
 				},
 				{
 				  type = "nested-result",
