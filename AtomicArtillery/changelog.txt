@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 25/10/2022
+  Changes:
+    - Boost instant damage from 1500 to 3000 (behemoth worms have 750 hp and 70% fire resistance)
+    - Refactor and simplify projectile prototype
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 27/11/2020
   Changes:
