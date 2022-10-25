@@ -12,7 +12,7 @@ local instant_damage = {
             target_effects = {
                 {
                     type = "damage",
-                    damage = { amount = 1500, type = "fire" },
+                    damage = { amount = 3000, type = "fire" },
                 },
             },
         },
